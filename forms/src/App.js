@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import Step from './Step'
 
 class App extends Component {
 
@@ -11,7 +12,7 @@ class App extends Component {
 
   render() {
       const {data ={}} = this.props;
-      const {title=""} = data;
+      const {title="" ,steps=[]} = data;
 
     return (
       <div>
@@ -22,6 +23,7 @@ class App extends Component {
                   </Typography>
               </Toolbar>
           </AppBar>
+          <Step data = {steps}/>
       </div>
     );
   }
