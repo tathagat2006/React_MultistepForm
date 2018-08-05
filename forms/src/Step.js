@@ -63,7 +63,7 @@ class Step extends Component {
                         Prev
                     </Button>
                     <Button variant="contained" size="small" color="primary" onClick = {this.nextPage}>
-                        Next
+                        {curr_step_pos === data.length - 1 ? "Submit" : "Next"}
                     </Button>
 
                 </CardActions>
